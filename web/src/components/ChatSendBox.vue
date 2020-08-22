@@ -12,8 +12,8 @@
       :emojiGroups="emojiGroups"
       ref="emoji"
       @enterKey="handleSend"
-      @contentChanged="t => (content = t)"
-      :pickerWidth="550"
+      @contentChangedHtml='t => (content = t)'
+      :pickerWidth="544"
       :pickerArrowEnabled="false"
     >
       <template #twemoji-picker-button>
@@ -57,6 +57,9 @@ export default {
       this.$emit('send', this.content);
       this.$refs.emoji.cleanText();
       this.content = '';
+    },
+    a(c) {
+      console.log(c)
     },
     handleChange(e) {
       console.log(1111);

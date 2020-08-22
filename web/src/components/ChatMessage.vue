@@ -49,7 +49,7 @@ export default {
           <img class="avatar" width="36" height="36" src={item.avatar} />
           <div class="content">
             <div class="name">{item.name}</div>
-            {item.msg && <div class="text">{item.msg}</div>}
+            {item.msg && <div class="text"  domPropsInnerHTML={item.msg}>{item.msg}</div>}
             {item.file && <img src={item.file} alt="" ref="img" class="img" />}
           </div>
         </div>
@@ -59,15 +59,15 @@ export default {
     const selfBox = item => (
       <section class="message-item" ref="item">
         <div class="main self">
-          {item.msg && <div class="content">{item.msg}</div>}
+          {item.msg && <div class="content"  domPropsInnerHTML={item.msg}>{item.msg}</div>}
           {item.file && <img src={item.file} alt="" ref="img" class="img" />}
           <img class="avatar" width="36" height="36" src={item.avatar} />
         </div>
       </section>
     );
 
-    const msg = this.msgList.map(item =>
-      item.name === this.user.name ? selfBox(item) : otherBox(item)
+    const msg = this.msgList.map(
+      item => (item.name === this.user.name ? selfBox(item) : otherBox(item))
     );
 
     return (
