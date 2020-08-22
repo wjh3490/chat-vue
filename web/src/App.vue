@@ -164,8 +164,9 @@ export default {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-image: url(./assets/s2.jpg);
-  background-size: 100% 100%;
+  background: url(./assets/999.jpg) -145px -50px no-repeat;
+  background-size: 1900px 800px;
+
 }
 .particles {
   position: absolute;
@@ -181,7 +182,8 @@ export default {
   background-color: #fff;
   display: flex;
   border-radius: 50px;
-  margin: 20px auto;
+  margin: 20px 0;
+  margin-left: 105px;
   width: 860px;
   height: 600px;
 }

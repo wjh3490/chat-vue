@@ -39,7 +39,7 @@ export default {
         file: '',
         suffix: ''
       },
-      url: require('../assets/5.jpg')
+      url: require('../assets/888.jpg')
     };
   },
   methods: {
@@ -68,7 +68,7 @@ export default {
     color: white;
     font-weight: 100;
     letter-spacing: 2px;
-    transform: translate3d(260px, 100px, 0);
+    transform: translate3d(0px, 100px, 0);
     .form {
       width: 460px;
       height: auto;
